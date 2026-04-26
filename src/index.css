@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  color: #1e293b;
+  background: #ffffff;
+}
+
+#root {
+  width: 100%;
+  text-align: left;
+  min-height: 100vh;
+  display: block;
+}
+
+@layer components {
+
+  /* ── Buttons ── */
+  .btn-primary {
+    @apply inline-flex items-center gap-2 bg-[#0E2D6B] hover:bg-[#0B2459] text-white font-semibold px-7 py-3.5 rounded-full transition-all duration-300 shadow-lg shadow-[#0E2D6B]/20 hover:shadow-[#0E2D6B]/30 hover:-translate-y-0.5;
+  }
+  .btn-primary-teal {
+    @apply inline-flex items-center gap-2 bg-[#0EA18E] hover:bg-[#0B8A7A] text-white font-semibold px-7 py-3.5 rounded-full transition-all duration-300 shadow-lg shadow-[#0EA18E]/20 hover:-translate-y-0.5;
+  }
+  .btn-white {
+    @apply inline-flex items-center gap-2 bg-white hover:bg-blue-50 text-[#0E2D6B] font-bold px-7 py-3.5 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5;
+  }
+  .btn-outline-white {
+    @apply inline-flex items-center gap-2 border-2 border-white/40 text-white hover:bg-white hover:text-[#0E2D6B] font-semibold px-7 py-3.5 rounded-full transition-all duration-300;
+  }
+  .btn-outline-navy {
+    @apply inline-flex items-center gap-2 border-2 border-[#0E2D6B] text-[#0E2D6B] hover:bg-[#0E2D6B] hover:text-white font-semibold px-7 py-3.5 rounded-full transition-all duration-300;
+  }
+
+  /* ── Cards ── */
+  .card {
+    @apply bg-white border border-slate-200 rounded-2xl transition-all duration-300 hover:border-[#0E2D6B]/15 hover:-translate-y-2 hover:shadow-xl;
+  }
+
+  /* ── Layout ── */
+  .section-padding { @apply py-24 px-4 sm:px-6 lg:px-8; }
+  .container-max   { @apply max-w-7xl mx-auto; }
+
+  /* ── Typography ── */
+  .section-label {
+    @apply text-[#0EA18E] font-semibold text-sm uppercase tracking-widest mb-3 block;
+  }
+  .section-title   { @apply text-4xl sm:text-5xl font-bold text-slate-900 leading-tight; }
+  .section-subtitle { @apply text-lg text-slate-500 mt-4 max-w-2xl; }
+
+  /* ── Navy dark sections ── */
+  .section-label-light { @apply text-[#5DD8C8] font-semibold text-sm uppercase tracking-widest mb-3 block; }
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: #f1f5f9; }
+::-webkit-scrollbar-thumb { background: #0E2D6B; border-radius: 3px; }
+
+/* Brand logo marquee */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 40s linear infinite;
+}
+.animate-marquee:hover { animation-play-state: paused; }
