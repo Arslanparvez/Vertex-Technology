@@ -4,7 +4,7 @@ import ScrollReveal from '../components/ScrollReveal';
 const milestones = [
   { year:'1998', title:'Founded in Dubai',       desc:'Vertex Print Technologies established in Dubai, UAE, with a focus on printing consumables.' },
   { year:'2003', title:'Regional Expansion',      desc:'Extended operations to Oman and Qatar, serving the growing GCC market.' },
-  { year:'2008', title:'Hi Print Brand Launch',   desc:'Launched proprietary brand "HI PRINT" — manufactured in UAE to global quality standards.' },
+  { year:'2008', title:'Vertex Technology Brand Launch',   desc:'Launched proprietary brand "Vertex Technology" — manufactured in UAE to global quality standards.' },
   { year:'2012', title:'Technology Portfolio',    desc:'Expanded into computing, networking, and cyber security solutions.' },
   { year:'2018', title:'Bahrain Presence',        desc:'Opened operations in Bahrain, completing our GCC footprint.' },
   { year:'2024', title:'Digital Transformation', desc:'Embracing cloud, AI-driven security, and smart office technology solutions.' },
@@ -63,7 +63,7 @@ export default function About() {
               <span className="section-label">Who We Are</span>
               <h2 className="text-4xl font-bold text-slate-900 mb-6 leading-tight">Built on Trust, Quality & Innovation</h2>
               <p className="text-slate-500 leading-relaxed mb-5">Vertex Print Technologies was founded in 1998 in Dubai. What started as a specialist in printing consumables has evolved into a full-spectrum technology solutions provider serving the UAE, Oman, Qatar, and Bahrain.</p>
-              <p className="text-slate-500 leading-relaxed mb-8">Our proprietary brand, <strong className="text-slate-800">HI PRINT</strong>, is proudly manufactured in the UAE, combining local expertise with international quality standards.</p>
+              <p className="text-slate-500 leading-relaxed mb-8">Our proprietary brand, <strong className="text-slate-800">Vertex Technology</strong>, is proudly manufactured in the UAE, combining local expertise with international quality standards.</p>
               <div className="grid grid-cols-2 gap-4 mb-8">
                 {[{l:'Countries',v:'4'},{l:'Years Active',v:'25+'},{l:'Products',v:'500+'},{l:'Clients',v:'10K+'}].map(s=>(
                   <div key={s.l} className="bg-slate-50 border border-slate-200 rounded-2xl p-5">

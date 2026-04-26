@@ -25,7 +25,7 @@ const brands = [
 
 const hiPrintFeatures = [
   { icon: '🏭', title: 'UAE Manufactured',     desc: 'Proudly produced in the UAE with state-of-the-art manufacturing facilities.' },
-  { icon: '✅', title: 'ISO Certified Quality', desc: 'Every HI PRINT product undergoes rigorous quality testing to meet international standards.' },
+  { icon: '✅', title: 'ISO Certified Quality', desc: 'Every Vertex Technology product undergoes rigorous quality testing to meet international standards.' },
   { icon: '💰', title: 'Cost Effective',        desc: 'Premium quality at competitive prices — designed for businesses that demand value.' },
   { icon: '♻️', title: 'Eco-Friendly',          desc: 'Sustainable manufacturing and recyclable materials for a greener future.' },
 ];
@@ -53,7 +53,7 @@ export default function Brands() {
               <span style={{color:'#5DD8C8'}}>One Trusted Partner</span>
             </h1>
             <p className="text-xl text-white/70 max-w-2xl mx-auto">
-              We partner with the world's most recognized technology brands, plus our very own UAE-manufactured HI PRINT line.
+              We partner with the world's most recognized technology brands, plus our very own UAE-manufactured Vertex Technology line.
             </p>
           </ScrollReveal>
         </div>
@@ -108,24 +108,24 @@ export default function Brands() {
         </div>
       </section>
 
-      {/* HI PRINT */}
+      {/* Vertex Technology */}
       <section className="section-padding bg-slate-50">
         <div className="container-max">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <ScrollReveal direction="right">
               <span className="section-label">Proprietary Brand</span>
               <div className="mb-3">
-                <h2 className="text-6xl font-black text-[#E07020] inline-block tracking-tight">HI PRINT</h2>
+                <h2 className="text-6xl font-black text-[#E07020] inline-block tracking-tight">Vertex Technology</h2>
               </div>
               <p className="text-slate-500 text-lg font-medium mb-6">Made in UAE · Global Quality Standards</p>
               <p className="text-slate-500 leading-relaxed mb-5">
-                HI PRINT is Vertex Print Technologies's flagship proprietary brand — designed, engineered, and manufactured right here in the UAE. Combining world-class quality with competitive pricing, HI PRINT products are a trusted choice for thousands of businesses across the GCC.
+                Vertex Technology is Vertex Print Technologies's flagship proprietary brand — designed, engineered, and manufactured right here in the UAE. Combining world-class quality with competitive pricing, Vertex Technology products are a trusted choice for thousands of businesses across the GCC.
               </p>
               <p className="text-slate-500 leading-relaxed mb-8">
                 Our toners and cartridges are fully compatible with all major printer brands and go through rigorous quality control to ensure flawless performance and exceptional yield.
               </p>
               <Link to="/contact" className="btn-primary">
-                Enquire About HI PRINT
+                Enquire About Vertex Technology
                 <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3"/>
                 </svg>

@@ -14,7 +14,7 @@ const productLinks = [
 const companyLinks = [
   { label: 'About Us',   path: '/about' },
   { label: 'Our Brands', path: '/brands' },
-  { label: 'HI PRINT',  path: '/brands' },
+  { label: 'Vertex Technology',  path: '/brands' },
   { label: 'Contact Us', path: '/contact' },
 ];
 
