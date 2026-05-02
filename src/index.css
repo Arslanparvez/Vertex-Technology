@@ -4,6 +4,18 @@
 @tailwind components;
 @tailwind utilities;
 
+/*
+  Color palette (derived from the Vertex V logo):
+  --blue-electric : #1264D6   Primary CTA / links / active states
+  --blue-dark     : #0D2848   Dark backgrounds / nav sections
+  --blue-deepest  : #060D1A   Darkest hero backgrounds
+  --blue-mid      : #1B52A8   Gradient mid-stop
+  --cyan          : #00B4D8   Section labels / accents
+  --cyan-light    : #7DD3F5   Light accents on dark backgrounds
+  --cyan-bright   : #4DB8FF   Icon/dot highlights
+  --chrome        : #94A3B8   Subtle chrome/silver accents
+*/
+
 * { margin: 0; padding: 0; box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 
@@ -25,24 +37,24 @@ body {
 
   /* ── Buttons ── */
   .btn-primary {
-    @apply inline-flex items-center gap-2 bg-[#0E2D6B] hover:bg-[#0B2459] text-white font-semibold px-7 py-3.5 rounded-full transition-all duration-300 shadow-lg shadow-[#0E2D6B]/20 hover:shadow-[#0E2D6B]/30 hover:-translate-y-0.5;
+    @apply inline-flex items-center gap-2 bg-[#1264D6] hover:bg-[#0D52B8] text-white font-semibold px-7 py-3.5 rounded-full transition-all duration-300 shadow-lg shadow-[#1264D6]/25 hover:shadow-[#1264D6]/35 hover:-translate-y-0.5;
   }
   .btn-primary-teal {
-    @apply inline-flex items-center gap-2 bg-[#0EA18E] hover:bg-[#0B8A7A] text-white font-semibold px-7 py-3.5 rounded-full transition-all duration-300 shadow-lg shadow-[#0EA18E]/20 hover:-translate-y-0.5;
+    @apply inline-flex items-center gap-2 bg-[#00B4D8] hover:bg-[#009CBD] text-white font-semibold px-7 py-3.5 rounded-full transition-all duration-300 shadow-lg shadow-[#00B4D8]/20 hover:-translate-y-0.5;
   }
   .btn-white {
-    @apply inline-flex items-center gap-2 bg-white hover:bg-blue-50 text-[#0E2D6B] font-bold px-7 py-3.5 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5;
+    @apply inline-flex items-center gap-2 bg-white hover:bg-blue-50 text-[#0D2848] font-bold px-7 py-3.5 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5;
   }
   .btn-outline-white {
-    @apply inline-flex items-center gap-2 border-2 border-white/40 text-white hover:bg-white hover:text-[#0E2D6B] font-semibold px-7 py-3.5 rounded-full transition-all duration-300;
+    @apply inline-flex items-center gap-2 border-2 border-white/40 text-white hover:bg-white hover:text-[#0D2848] font-semibold px-7 py-3.5 rounded-full transition-all duration-300;
   }
   .btn-outline-navy {
-    @apply inline-flex items-center gap-2 border-2 border-[#0E2D6B] text-[#0E2D6B] hover:bg-[#0E2D6B] hover:text-white font-semibold px-7 py-3.5 rounded-full transition-all duration-300;
+    @apply inline-flex items-center gap-2 border-2 border-[#1264D6] text-[#1264D6] hover:bg-[#1264D6] hover:text-white font-semibold px-7 py-3.5 rounded-full transition-all duration-300;
   }
 
   /* ── Cards ── */
   .card {
-    @apply bg-white border border-slate-200 rounded-2xl transition-all duration-300 hover:border-[#0E2D6B]/15 hover:-translate-y-2 hover:shadow-xl;
+    @apply bg-white border border-slate-200 rounded-2xl transition-all duration-300 hover:border-[#1264D6]/20 hover:-translate-y-2 hover:shadow-xl;
   }
 
   /* ── Layout ── */
@@ -51,19 +63,19 @@ body {
 
   /* ── Typography ── */
   .section-label {
-    @apply text-[#0EA18E] font-semibold text-sm uppercase tracking-widest mb-3 block;
+    @apply text-[#00B4D8] font-semibold text-sm uppercase tracking-widest mb-3 block;
   }
   .section-title   { @apply text-4xl sm:text-5xl font-bold text-slate-900 leading-tight; }
   .section-subtitle { @apply text-lg text-slate-500 mt-4 max-w-2xl; }
 
-  /* ── Navy dark sections ── */
-  .section-label-light { @apply text-[#5DD8C8] font-semibold text-sm uppercase tracking-widest mb-3 block; }
+  /* ── Dark section labels ── */
+  .section-label-light { @apply text-[#7DD3F5] font-semibold text-sm uppercase tracking-widest mb-3 block; }
 }
 
 /* Scrollbar */
 ::-webkit-scrollbar { width: 5px; }
 ::-webkit-scrollbar-track { background: #f1f5f9; }
-::-webkit-scrollbar-thumb { background: #0E2D6B; border-radius: 3px; }
+::-webkit-scrollbar-thumb { background: #1264D6; border-radius: 3px; }
 
 /* Brand logo marquee */
 @keyframes marquee {
@@ -76,3 +88,45 @@ body {
   animation: marquee 40s linear infinite;
 }
 .animate-marquee:hover { animation-play-state: paused; }
+
+/* Floating / levitating elements */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-14px); }
+}
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50%       { transform: translateY(-10px) rotate(3deg); }
+}
+.animate-float      { animation: float 6s ease-in-out infinite; }
+.animate-float-slow { animation: float-slow 9s ease-in-out infinite; }
+
+/* Shimmer scan-line (use on ::after pseudo) */
+@keyframes shimmer {
+  0%   { transform: translateX(-100%) skewX(-15deg); }
+  100% { transform: translateX(200%)  skewX(-15deg); }
+}
+.animate-shimmer::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.06) 50%, transparent 100%);
+  animation: shimmer 3.5s ease-in-out infinite;
+  pointer-events: none;
+}
+
+/* Pulse ring — use on status dots / icons */
+@keyframes ring-pulse {
+  0%   { box-shadow: 0 0 0 0 rgba(77, 184, 255, 0.45); }
+  70%  { box-shadow: 0 0 0 10px rgba(77, 184, 255, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(77, 184, 255, 0); }
+}
+.animate-ring-pulse { animation: ring-pulse 2.4s ease-out infinite; }
+
+/* Gradient text utility */
+.gradient-text {
+  background: linear-gradient(135deg, #7DD3F5 0%, #4DB8FF 40%, #1264D6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}

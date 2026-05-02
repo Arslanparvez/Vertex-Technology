@@ -4,30 +4,30 @@ import { motion, AnimatePresence } from 'framer-motion';
 const testimonials = [
   {
     name: 'Ahmed Al Rashidi',
-    role: 'IT Manager, Emirates Healthcare Group',
+    role: 'IT Manager, Dubai Healthcare Group',
     avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&h=80&fit=crop&crop=face',
-    text: 'Vertex Print Technologies transformed our entire IT procurement process. Their range of printing supplies and computing products is unmatched in the UAE market. Delivery is always on time and quality is consistently excellent.',
+    text: 'Vertex Print Technologies transformed our entire office procurement process. Their range of printing supplies and computing products is unmatched in the UAE. Delivery is always on time and the quality is consistently excellent.',
     stars: 5,
   },
   {
     name: 'Sarah Mitchell',
     role: 'Operations Director, Gulf Education Alliance',
     avatar: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=80&h=80&fit=crop&crop=face',
-    text: "We have been partnering with Vertex Print Technologies for over 5 years. Their cyber security solutions and data storage products have been critical to our institution's digital transformation. Highly recommended.",
+    text: 'We have been sourcing all our office and IT supplies from Vertex for two years now. Their technical team helped us set up our networking infrastructure and the post-purchase support has been exceptional throughout.',
     stars: 5,
   },
   {
     name: 'Mohammed Al Farsi',
     role: 'CEO, Al Farsi Business Group',
     avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=80&h=80&fit=crop&crop=face',
-    text: "Exceptional service and premium products. Vertex Print Technologies went above and beyond to source the exact toner cartridges we needed across our 12 office locations. The cost savings were significant.",
+    text: 'Exceptional service and genuinely premium products. Vertex sourced the exact Vertex Technology toner cartridges we needed across all 12 of our office locations. The cost savings and reliability have been remarkable.',
     stars: 5,
   },
   {
     name: 'Fatima Al Zaabi',
-    role: 'Procurement Head, Abu Dhabi Municipality',
+    role: 'Procurement Manager, Abu Dhabi Municipality',
     avatar: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=80&h=80&fit=crop&crop=face',
-    text: 'Government procurement can be complex, but Vertex Print Technologies made it seamless. Their compliance documentation and product quality meet all our regulatory requirements. A trusted partner for public sector.',
+    text: 'Corporate procurement demands reliability and compliance. Vertex Print Technologies delivered on both — genuine products, proper documentation, and a support team that is always available across GCC offices.',
     stars: 5,
   },
 ];
@@ -76,7 +76,7 @@ export default function TestimonialSlider() {
           >
             <div className="flex flex-col md:flex-row gap-8 items-start">
               <div className="flex-shrink-0">
-                <div className="p-0.5 rounded-2xl bg-gradient-to-br from-[#0E2D6B] to-[#0EA18E]">
+                <div className="p-0.5 rounded-2xl bg-gradient-to-br from-[#0D2848] to-[#1264D6]">
                   <img
                     src={testimonials[current].avatar}
                     alt={testimonials[current].name}
@@ -91,7 +91,7 @@ export default function TestimonialSlider() {
                 </p>
                 <div>
                   <p className="font-bold text-slate-900">{testimonials[current].name}</p>
-                  <p className="text-[#0E2D6B] text-sm font-medium">{testimonials[current].role}</p>
+                  <p className="text-[#1264D6] text-sm font-medium">{testimonials[current].role}</p>
                 </div>
               </div>
             </div>
@@ -105,7 +105,7 @@ export default function TestimonialSlider() {
             key={idx}
             onClick={() => goTo(idx)}
             className={`transition-all duration-300 rounded-full ${
-              idx === current ? 'w-8 h-2 bg-[#0E2D6B]' : 'w-2 h-2 bg-slate-300 hover:bg-slate-400'
+              idx === current ? 'w-8 h-2 bg-[#1264D6]' : 'w-2 h-2 bg-slate-300 hover:bg-slate-400'
             }`}
           />
         ))}

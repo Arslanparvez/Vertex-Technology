@@ -41,6 +41,14 @@ const socials = [
   },
 ];
 
+const linkVariants = {
+  hidden:  { opacity: 0, y: -10 },
+  visible: (i) => ({
+    opacity: 1, y: 0,
+    transition: { delay: 0.55 + i * 0.07, duration: 0.4, ease: [0.22, 1, 0.36, 1] },
+  }),
+};
+
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
@@ -55,18 +63,22 @@ export default function Navbar() {
   useEffect(() => setMenuOpen(false), [location]);
 
   const onDark = !scrolled;
-  const linkBase  = onDark ? 'text-white/80 hover:text-white'    : 'text-slate-600 hover:text-[#0E2D6B]';
-  const activeLink = onDark ? 'text-white font-semibold'          : 'text-[#0E2D6B] font-semibold';
+  const linkBase   = onDark ? 'text-white/80 hover:text-white'        : 'text-slate-600 hover:text-[#1264D6]';
+  const activeLink = onDark ? 'text-white font-semibold'               : 'text-[#1264D6] font-semibold';
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50">
+    <motion.header
+      className="fixed top-0 left-0 right-0 z-50"
+      initial={{ y: -120, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ duration: 0.75, ease: [0.22, 1, 0.36, 1] }}
+    >
 
       {/* ── Top utility bar ── */}
-      <div className="bg-[#061328] border-b border-white/5">
+      <div className="bg-[#060D1A] border-b border-white/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-10">
 
-            {/* Left: contact details */}
             <div className="hidden sm:flex items-center gap-5 text-[11px] text-white/55">
               <a href="tel:+97142345678" className="flex items-center gap-1.5 hover:text-white transition-colors duration-200">
                 <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -83,14 +95,13 @@ export default function Navbar() {
               </a>
               <span className="w-px h-3 bg-white/15"/>
               <span className="flex items-center gap-1">
-                <svg className="w-3 h-3 text-[#0EA18E]" fill="currentColor" viewBox="0 0 8 8">
+                <svg className="w-3 h-3 text-[#00B4D8]" fill="currentColor" viewBox="0 0 8 8">
                   <circle cx="4" cy="4" r="3"/>
                 </svg>
                 Sun – Thu: 8AM – 6PM
               </span>
             </div>
 
-            {/* Right: regions + socials */}
             <div className="flex items-center gap-4 ml-auto">
               <span className="hidden md:block text-[11px] text-white/40 tracking-wide">UAE · Oman · Qatar · Bahrain</span>
               <span className="hidden md:block w-px h-3 bg-white/15"/>
@@ -111,39 +122,39 @@ export default function Navbar() {
       {/* ── Main nav ── */}
       <div className={`transition-all duration-300 ${
         scrolled
-          ? 'bg-white/97 backdrop-blur-xl border-b border-slate-200/80 shadow-[0_1px_12px_rgba(14,45,107,0.08)]'
+          ? 'bg-white/97 backdrop-blur-xl border-b border-slate-200/80 shadow-[0_1px_12px_rgba(18,100,214,0.08)]'
           : 'bg-transparent'
       }`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-[72px]">
 
-            {/* Logo */}
             <Link to="/" className="flex items-center group flex-shrink-0">
               <Logo className={`h-11 transition-opacity duration-200 group-hover:opacity-80 ${
-                scrolled ? 'text-[#0E2D6B]' : 'text-white'
+                scrolled ? 'text-[#0D2848]' : 'text-white'
               }`}/>
             </Link>
 
-            {/* Desktop nav links */}
             <nav className="hidden md:flex items-center">
               {navLinks.map((link, i) => (
                 <div key={link.path} className="flex items-center">
-                  <Link
-                    to={link.path}
-                    className={`relative px-4 py-2 text-sm transition-all duration-200 ${
-                      location.pathname === link.path ? activeLink : linkBase
-                    }`}
-                  >
-                    {link.label}
-                    {location.pathname === link.path && (
-                      <motion.span
-                        layoutId="activeNav"
-                        className={`absolute bottom-0 left-4 right-4 h-0.5 rounded-full ${
-                          onDark ? 'bg-white' : 'bg-[#0E2D6B]'
-                        }`}
-                      />
-                    )}
-                  </Link>
+                  <motion.div custom={i} initial="hidden" animate="visible" variants={linkVariants}>
+                    <Link
+                      to={link.path}
+                      className={`relative px-4 py-2 text-sm transition-all duration-200 ${
+                        location.pathname === link.path ? activeLink : linkBase
+                      }`}
+                    >
+                      {link.label}
+                      {location.pathname === link.path && (
+                        <motion.span
+                          layoutId="activeNav"
+                          className={`absolute bottom-0 left-4 right-4 h-0.5 rounded-full ${
+                            onDark ? 'bg-white' : 'bg-[#1264D6]'
+                          }`}
+                        />
+                      )}
+                    </Link>
+                  </motion.div>
                   {i < navLinks.length - 1 && (
                     <span className={`w-px h-3.5 ${onDark ? 'bg-white/15' : 'bg-slate-200'}`}/>
                   )}
@@ -151,35 +162,35 @@ export default function Navbar() {
               ))}
             </nav>
 
-            {/* CTA + hamburger */}
             <div className="flex items-center gap-3">
               <a
                 href="tel:+97142345678"
                 className={`hidden lg:flex items-center gap-2 text-sm font-medium transition-all duration-200 ${
-                  scrolled ? 'text-slate-500 hover:text-[#0E2D6B]' : 'text-white/70 hover:text-white'
+                  scrolled ? 'text-slate-500 hover:text-[#1264D6]' : 'text-white/70 hover:text-white'
                 }`}
               >
-                <svg className={`w-4 h-4 ${scrolled ? 'text-[#0EA18E]' : 'text-[#5DD8C8]'}`} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <svg className={`w-4 h-4 ${scrolled ? 'text-[#00B4D8]' : 'text-[#7DD3F5]'}`} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
                 </svg>
                 +971 4 234 5678
               </a>
 
-              <Link
-                to="/contact"
-                className={`hidden md:inline-flex items-center gap-2 font-semibold px-5 py-2.5 rounded-full text-sm transition-all duration-300 ${
-                  scrolled
-                    ? 'bg-[#0E2D6B] text-white shadow-md shadow-[#0E2D6B]/20 hover:bg-[#0B2459] hover:-translate-y-px'
-                    : 'bg-white/15 text-white border border-white/30 hover:bg-white hover:text-[#0E2D6B] backdrop-blur-sm'
-                }`}
-              >
-                Get a Quote
-                <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-                </svg>
-              </Link>
+              <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
+                <Link
+                  to="/contact"
+                  className={`hidden md:inline-flex items-center gap-2 font-semibold px-5 py-2.5 rounded-full text-sm transition-all duration-300 ${
+                    scrolled
+                      ? 'bg-[#1264D6] text-white shadow-md shadow-[#1264D6]/25 hover:bg-[#0D52B8]'
+                      : 'bg-white/15 text-white border border-white/30 hover:bg-white hover:text-[#0D2848] backdrop-blur-sm'
+                  }`}
+                >
+                  Get a Quote
+                  <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                  </svg>
+                </Link>
+              </motion.div>
 
-              {/* Hamburger */}
               <button
                 onClick={() => setMenuOpen(!menuOpen)}
                 className={`md:hidden p-2 rounded-lg transition-colors ${
@@ -216,8 +227,8 @@ export default function Navbar() {
                   to={link.path}
                   className={`px-4 py-3 rounded-xl font-medium text-sm transition-all ${
                     location.pathname === link.path
-                      ? 'bg-[#0E2D6B]/8 text-[#0E2D6B] font-semibold border-l-2 border-[#0E2D6B]'
-                      : 'text-slate-600 hover:bg-slate-50 hover:text-[#0E2D6B]'
+                      ? 'bg-[#1264D6]/8 text-[#1264D6] font-semibold border-l-2 border-[#1264D6]'
+                      : 'text-slate-600 hover:bg-slate-50 hover:text-[#1264D6]'
                   }`}
                 >
                   {link.label}
@@ -225,12 +236,12 @@ export default function Navbar() {
               ))}
               <div className="pt-2 mt-1 border-t border-slate-100 flex flex-col gap-2">
                 <a href="tel:+97142345678" className="flex items-center gap-2 px-4 py-2 text-sm text-slate-500">
-                  <svg className="w-4 h-4 text-[#0EA18E]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <svg className="w-4 h-4 text-[#00B4D8]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
                   </svg>
                   +971 4 234 5678
                 </a>
-                <Link to="/contact" className="text-center bg-[#0E2D6B] text-white font-semibold px-5 py-3 rounded-xl text-sm">
+                <Link to="/contact" className="text-center bg-[#1264D6] text-white font-semibold px-5 py-3 rounded-xl text-sm">
                   Get a Quote
                 </Link>
               </div>
@@ -239,6 +250,12 @@ export default function Navbar() {
         )}
       </AnimatePresence>
 
-    </header>
+    </motion.header>
   );
 }
+
+
+
+
+
+

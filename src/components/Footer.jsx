@@ -12,10 +12,10 @@ const productLinks = [
 ];
 
 const companyLinks = [
-  { label: 'About Us',   path: '/about' },
-  { label: 'Our Brands', path: '/brands' },
-  { label: 'Vertex Technology',  path: '/brands' },
-  { label: 'Contact Us', path: '/contact' },
+  { label: 'About Us',        path: '/about' },
+  { label: 'Our Brands',      path: '/brands' },
+  { label: 'Vertex Technology', path: '/brands' },
+  { label: 'Contact Us',      path: '/contact' },
 ];
 
 const supportLinks = [
@@ -67,9 +67,8 @@ const socials = [
 
 export default function Footer() {
   return (
-    <footer className="bg-[#060F24] text-white/60">
+    <footer className="bg-[#060D1A] text-white/60">
 
-      {/* ── Main grid ── */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10">
 
@@ -82,41 +81,39 @@ export default function Footer() {
               Empowering businesses across the UAE and GCC with premium printing, technology, and office solutions since 1998.
             </p>
 
-            {/* Social icons */}
             <div className="flex items-center gap-2 mb-8">
               {socials.map(s => (
                 <a
                   key={s.label}
                   href={s.href}
                   aria-label={s.label}
-                  className="w-8 h-8 rounded-lg bg-white/5 border border-white/8 flex items-center justify-center text-white/40 hover:bg-[#0EA18E]/15 hover:text-[#0EA18E] hover:border-[#0EA18E]/30 transition-all duration-200"
+                  className="w-8 h-8 rounded-lg bg-white/5 border border-white/8 flex items-center justify-center text-white/40 hover:bg-[#1264D6]/20 hover:text-[#7DD3F5] hover:border-[#1264D6]/30 transition-all duration-200"
                 >
                   {s.icon}
                 </a>
               ))}
             </div>
 
-            {/* Contact details */}
             <div className="flex flex-col gap-3 text-sm">
               <a href="tel:+97142345678" className="flex items-center gap-2.5 text-white/50 hover:text-white transition-colors group">
-                <div className="w-7 h-7 rounded-md bg-[#0EA18E]/10 flex items-center justify-center flex-shrink-0 group-hover:bg-[#0EA18E]/20 transition-colors">
-                  <svg className="w-3.5 h-3.5 text-[#0EA18E]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <div className="w-7 h-7 rounded-md bg-[#1264D6]/10 flex items-center justify-center flex-shrink-0 group-hover:bg-[#1264D6]/20 transition-colors">
+                  <svg className="w-3.5 h-3.5 text-[#00B4D8]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
                   </svg>
                 </div>
                 +971 4 234 5678
               </a>
               <a href="mailto:info@vertexprint.ae" className="flex items-center gap-2.5 text-white/50 hover:text-white transition-colors group">
-                <div className="w-7 h-7 rounded-md bg-[#0EA18E]/10 flex items-center justify-center flex-shrink-0 group-hover:bg-[#0EA18E]/20 transition-colors">
-                  <svg className="w-3.5 h-3.5 text-[#0EA18E]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <div className="w-7 h-7 rounded-md bg-[#1264D6]/10 flex items-center justify-center flex-shrink-0 group-hover:bg-[#1264D6]/20 transition-colors">
+                  <svg className="w-3.5 h-3.5 text-[#00B4D8]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
                   </svg>
                 </div>
                 info@vertexprint.ae
               </a>
               <div className="flex items-center gap-2.5 text-white/50">
-                <div className="w-7 h-7 rounded-md bg-[#0EA18E]/10 flex items-center justify-center flex-shrink-0">
-                  <svg className="w-3.5 h-3.5 text-[#0EA18E]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <div className="w-7 h-7 rounded-md bg-[#1264D6]/10 flex items-center justify-center flex-shrink-0">
+                  <svg className="w-3.5 h-3.5 text-[#00B4D8]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
                   </svg>
@@ -129,7 +126,7 @@ export default function Footer() {
           {/* Products */}
           <div className="lg:col-span-3">
             <h4 className="text-white text-xs font-bold uppercase tracking-[0.12em] mb-5 flex items-center gap-2">
-              <span className="w-4 h-px bg-[#0EA18E]"/>
+              <span className="w-4 h-px bg-[#00B4D8]"/>
               Products
             </h4>
             <ul className="flex flex-col gap-2.5">
@@ -146,7 +143,7 @@ export default function Footer() {
           {/* Company */}
           <div className="lg:col-span-2">
             <h4 className="text-white text-xs font-bold uppercase tracking-[0.12em] mb-5 flex items-center gap-2">
-              <span className="w-4 h-px bg-[#0EA18E]"/>
+              <span className="w-4 h-px bg-[#00B4D8]"/>
               Company
             </h4>
             <ul className="flex flex-col gap-2.5">
@@ -163,7 +160,7 @@ export default function Footer() {
           {/* Support */}
           <div className="lg:col-span-3">
             <h4 className="text-white text-xs font-bold uppercase tracking-[0.12em] mb-5 flex items-center gap-2">
-              <span className="w-4 h-px bg-[#0EA18E]"/>
+              <span className="w-4 h-px bg-[#00B4D8]"/>
               Support
             </h4>
             <ul className="flex flex-col gap-2.5">
@@ -176,7 +173,6 @@ export default function Footer() {
               ))}
             </ul>
 
-            {/* Certifications */}
             <div className="mt-8 flex flex-col gap-2">
               <div className="inline-flex items-center gap-2 bg-white/5 border border-white/8 rounded-lg px-3 py-2 w-fit">
                 <svg className="w-4 h-4 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -194,10 +190,8 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* ── Divider ── */}
       <div className="border-t border-white/5"/>
 
-      {/* ── Bottom bar ── */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5">
         <div className="flex flex-col sm:flex-row items-center justify-between gap-3">
           <p className="text-xs text-white/30">
@@ -209,7 +203,7 @@ export default function Footer() {
             <Link to="/contact" className="hover:text-white/60 transition-colors">Terms of Use</Link>
             <span className="w-px h-3 bg-white/10"/>
             <span className="flex items-center gap-1.5">
-              <span className="w-1.5 h-1.5 bg-emerald-400 rounded-full animate-pulse"/>
+              <span className="w-1.5 h-1.5 bg-[#00B4D8] rounded-full animate-pulse"/>
               Operating across UAE & GCC
             </span>
           </div>

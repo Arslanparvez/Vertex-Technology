@@ -1,123 +1,106 @@
-/**
- * Vertex Print Technologies LLC — SVG logo component.
- * Colored icon parts are hardcoded.
- * Text uses fill="currentColor" so parent can control via CSS `color` / Tailwind text-* class.
- */
 export default function Logo({ className = '' }) {
   return (
     <svg
-      viewBox="0 0 295 72"
+      viewBox="0 0 340 76"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       className={className}
       aria-label="Vertex Print Technologies LLC"
       style={{ width: 'auto', display: 'block' }}
     >
-      {/* ─────────────────────────────────────────
-          LEFT ARM OF V  (dark navy, 3-D box look)
-      ───────────────────────────────────────── */}
+      <defs>
+        {/* Left arm — deep navy to chrome blue */}
+        <linearGradient id="gL" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%"   stopColor="#06152A" />
+          <stop offset="40%"  stopColor="#0D2848" />
+          <stop offset="75%"  stopColor="#1E5090" />
+          <stop offset="100%" stopColor="#4880C0" />
+        </linearGradient>
 
-      {/* Front face — dark navy triangle */}
-      <polygon
-        points="3,7  25,7  41,68  25,68"
-        fill="#0E2D6B"
-      />
-      {/* Inner highlight face — medium navy (gives depth) */}
-      <polygon
-        points="25,7  34,7  41,68  25,68"
-        fill="#1B52A8"
-      />
-      {/* Top "depth" face — light navy parallelogram */}
-      <polygon
-        points="3,7  25,7  35,1  13,1"
-        fill="#2B6CC8"
-      />
+        {/* Left arm — chrome face highlight */}
+        <linearGradient id="gLH" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%"   stopColor="#B8D4EE" stopOpacity="0.55" />
+          <stop offset="60%"  stopColor="#90B8D8" stopOpacity="0.18" />
+          <stop offset="100%" stopColor="#78A0C8" stopOpacity="0.02" />
+        </linearGradient>
 
-      {/* ─────────────────────────────────────────
-          TEAL / GREEN FLOWING CURVES
-      ───────────────────────────────────────── */}
-      <path
-        d="M 18 62 C 28 42 46 24 67 7"
-        stroke="#0EA18E"
-        strokeWidth="8"
-        strokeLinecap="round"
-        fill="none"
-      />
-      <path
-        d="M 24 63 C 34 45 51 29 71 14"
-        stroke="#17C5B0"
-        strokeWidth="5.5"
-        strokeLinecap="round"
-        fill="none"
-        opacity="0.85"
-      />
-      <path
-        d="M 29 64 C 39 47 56 33 74 21"
-        stroke="#0EA18E"
-        strokeWidth="3.5"
-        strokeLinecap="round"
-        fill="none"
-        opacity="0.65"
-      />
+        {/* Right arm — electric blue to cyan glass */}
+        <linearGradient id="gR" x1="100%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%"   stopColor="#A8DCFF" />
+          <stop offset="28%"  stopColor="#50B8F5" />
+          <stop offset="65%"  stopColor="#1264D6" />
+          <stop offset="100%" stopColor="#0848A8" />
+        </linearGradient>
 
-      {/* ─────────────────────────────────────────
-          RIGHT ARM OF V  (orange / amber)
-      ───────────────────────────────────────── */}
-      <polygon
-        points="41,68  57,7  76,7  58,68"
-        fill="#E07020"
-      />
-      {/* Lighter orange inner strip for depth */}
-      <polygon
-        points="41,68  49,7  57,7  41,68"
-        fill="#F09040"
-      />
+        {/* Right arm — glass reflection */}
+        <linearGradient id="gRH" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%"   stopColor="#C8EEFF" stopOpacity="0.50" />
+          <stop offset="55%"  stopColor="#78C8FF" stopOpacity="0.12" />
+          <stop offset="100%" stopColor="#48A8FF" stopOpacity="0.00" />
+        </linearGradient>
 
-      {/* ─────────────────────────────────────────
-          INK DROPS / SPLATTER  (upper-right)
-      ───────────────────────────────────────── */}
-      {/* Teal teardrop */}
-      <ellipse
-        cx="74" cy="10"
-        rx="4" ry="6.5"
-        fill="#0EA18E"
-        transform="rotate(-28 74 10)"
-      />
-      {/* Blue circle */}
-      <circle cx="82" cy="4"  r="3.5" fill="#0E2D6B" />
-      {/* Orange circle */}
-      <circle cx="84" cy="20" r="4"   fill="#E07020" />
-      {/* Small blue dot */}
-      <circle cx="78" cy="24" r="2.2" fill="#0E2D6B"  opacity="0.75" />
-      {/* Small teal dot */}
-      <circle cx="88" cy="13" r="1.8" fill="#17C5B0"  opacity="0.9"  />
-      {/* Tiny orange dot */}
-      <circle cx="88" cy="28" r="1.4" fill="#E07020"  opacity="0.65" />
+        {/* Inner edge electric glow */}
+        <filter id="eg" x="-100%" y="-40%" width="300%" height="180%">
+          <feGaussianBlur stdDeviation="2.2" result="b" />
+          <feMerge><feMergeNode in="b" /><feMergeNode in="SourceGraphic" /></feMerge>
+        </filter>
 
-      {/* ─────────────────────────────────────────
-          TEXT  — fill="currentColor" adapts to
-          parent's CSS color (white or navy)
-      ───────────────────────────────────────── */}
+        {/* Dot glow */}
+        <filter id="dg" x="-100%" y="-100%" width="300%" height="300%">
+          <feGaussianBlur stdDeviation="1.8" result="b" />
+          <feMerge><feMergeNode in="b" /><feMergeNode in="SourceGraphic" /></feMerge>
+        </filter>
+      </defs>
+
+      {/* ══════════════════════════
+          LEFT ARM — dark navy
+          Parallelogram: top x=4–26, bottom x=24–46
+          Inner edge (26,4)→(46,72) forms left side of V notch
+          ══════════════════════════ */}
+      <polygon points="4,4 26,4 46,72 24,72" fill="url(#gL)" />
+      {/* Chrome highlight — right face of left arm (faces the notch) */}
+      <polygon points="19,4 26,4 46,72 39,72" fill="url(#gLH)" />
+
+      {/* ══════════════════════════
+          RIGHT ARM — electric blue
+          Parallelogram: top x=66–88, bottom x=46–68
+          Inner edge (66,4)→(46,72) forms right side of V notch
+          ══════════════════════════ */}
+      <polygon points="66,4 88,4 68,72 46,72" fill="url(#gR)" />
+      {/* Glass reflection — left face of right arm (faces the notch) */}
+      <polygon points="66,4 76,4 56,72 46,72" fill="url(#gRH)" />
+
+      {/* V notch inner-edge glow lines — electric energy on both inner edges */}
+      <line x1="26" y1="4"  x2="46" y2="72" stroke="#60C8FF" strokeWidth="1.1" opacity="0.60" filter="url(#eg)" />
+      <line x1="66" y1="4"  x2="46" y2="72" stroke="#60C8FF" strokeWidth="1.1" opacity="0.50" filter="url(#eg)" />
+
+      {/* ══════════════════════════
+          SPARKLE DOTS — upper right
+          ══════════════════════════ */}
+      <circle cx="90"  cy="7"  r="3.0" fill="#4DB8FF" filter="url(#dg)" />
+      <circle cx="97"  cy="1"  r="2.0" fill="#FFFFFF"  opacity="0.92" filter="url(#dg)" />
+      <circle cx="99"  cy="15" r="2.4" fill="#60C8FF"  opacity="0.80" filter="url(#dg)" />
+      <circle cx="94"  cy="23" r="1.5" fill="#A0D8FF"  opacity="0.58" />
+      <circle cx="87"  cy="0"  r="1.3" fill="#FFFFFF"   opacity="0.48" />
+      <circle cx="6"   cy="9"  r="1.2" fill="#4DB8FF"   opacity="0.28" />
+
+      {/* ══════════════════════════
+          LOGOTYPE
+          fill="currentColor" adapts to white (dark bg) or navy (light bg)
+          ══════════════════════════ */}
       <text
-        x="97"
-        y="40"
-        fontFamily="'Arial Black', 'Arial Bold', Impact, sans-serif"
-        fontSize="27"
-        fontWeight="900"
-        fill="currentColor"
-        letterSpacing="1.5"
+        x="110" y="44"
+        fontFamily="'Arial Black','Arial Bold',Impact,sans-serif"
+        fontSize="30" fontWeight="900"
+        fill="currentColor" letterSpacing="1.5"
       >
         VERTEX
       </text>
       <text
-        x="98"
-        y="61"
-        fontFamily="Arial, Helvetica, sans-serif"
-        fontSize="9.5"
-        fontWeight="700"
-        fill="currentColor"
-        opacity="0.6"
-        letterSpacing="3"
+        x="111" y="63"
+        fontFamily="Arial,Helvetica,sans-serif"
+        fontSize="9" fontWeight="700"
+        fill="currentColor" opacity="0.52" letterSpacing="3.0"
       >
         PRINT TECHNOLOGIES LLC
       </text>
