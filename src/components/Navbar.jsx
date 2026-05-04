@@ -80,18 +80,11 @@ export default function Navbar() {
           <div className="flex items-center justify-between h-10">
 
             <div className="hidden sm:flex items-center gap-5 text-[11px] text-white/55">
-              <a href="tel:+97142345678" className="flex items-center gap-1.5 hover:text-white transition-colors duration-200">
-                <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
-                </svg>
-                +971 4 234 5678
-              </a>
-              <span className="w-px h-3 bg-white/15"/>
-              <a href="mailto:info@vertexprint.ae" className="flex items-center gap-1.5 hover:text-white transition-colors duration-200">
+              <a href="mailto:admin@vertexprintdxb.com" className="flex items-center gap-1.5 hover:text-white transition-colors duration-200">
                 <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
                 </svg>
-                info@vertexprint.ae
+                admin@vertexprintdxb.com
               </a>
               <span className="w-px h-3 bg-white/15"/>
               <span className="flex items-center gap-1">
@@ -164,15 +157,15 @@ export default function Navbar() {
 
             <div className="flex items-center gap-3">
               <a
-                href="tel:+97142345678"
+                href="mailto:admin@vertexprintdxb.com"
                 className={`hidden lg:flex items-center gap-2 text-sm font-medium transition-all duration-200 ${
                   scrolled ? 'text-slate-500 hover:text-[#1264D6]' : 'text-white/70 hover:text-white'
                 }`}
               >
                 <svg className={`w-4 h-4 ${scrolled ? 'text-[#00B4D8]' : 'text-[#7DD3F5]'}`} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
                 </svg>
-                +971 4 234 5678
+                admin@vertexprintdxb.com
               </a>
 
               <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
@@ -235,11 +228,11 @@ export default function Navbar() {
                 </Link>
               ))}
               <div className="pt-2 mt-1 border-t border-slate-100 flex flex-col gap-2">
-                <a href="tel:+97142345678" className="flex items-center gap-2 px-4 py-2 text-sm text-slate-500">
+                <a href="mailto:admin@vertexprintdxb.com" className="flex items-center gap-2 px-4 py-2 text-sm text-slate-500">
                   <svg className="w-4 h-4 text-[#00B4D8]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
                   </svg>
-                  +971 4 234 5678
+                  admin@vertexprintdxb.com
                 </a>
                 <Link to="/contact" className="text-center bg-[#1264D6] text-white font-semibold px-5 py-3 rounded-xl text-sm">
                   Get a Quote

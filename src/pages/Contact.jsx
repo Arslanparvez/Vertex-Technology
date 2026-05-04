@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import ScrollReveal from '../components/ScrollReveal';
 
@@ -6,26 +7,13 @@ const contactInfo = [
   {
     icon: (
       <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-      </svg>
-    ),
-    label: 'Phone',
-    value: '+971 4 234 5678',
-    sub: 'Sun – Thu: 8AM – 6PM',
-    href: 'tel:+97142345678',
-    bg: 'bg-[#1264D6]/10',
-    text: 'text-[#1264D6]',
-  },
-  {
-    icon: (
-      <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
       </svg>
     ),
     label: 'Email',
-    value: 'info@vertexprint.ae',
+    value: 'admin@vertexprintdxb.com',
     sub: 'We respond within 24 hours',
-    href: 'mailto:info@vertexprint.ae',
+    href: 'mailto:admin@vertexprintdxb.com',
     bg: 'bg-[#00B4D8]/10',
     text: 'text-[#00B4D8]',
   },
@@ -37,8 +25,8 @@ const contactInfo = [
       </svg>
     ),
     label: 'Address',
-    value: 'Dubai Silicon Oasis',
-    sub: 'Dubai, United Arab Emirates',
+    value: 'Shop No. 2, Falcon Apartments',
+    sub: 'Bur Dubai, Al Ghubaiba, Dubai',
     href: null,
     bg: 'bg-violet-50',
     text: 'text-violet-600',
@@ -63,9 +51,8 @@ const offices = [
     city: 'Dubai',
     flag: '🇦🇪',
     type: 'Head Office',
-    address: 'Dubai Silicon Oasis, Dubai, UAE',
-    phone: '+971 4 234 5678',
-    email: 'dubai@vertexprint.ae',
+    address: 'Shop No. 2, Falcon Apartments, Bur Dubai, Al Ghubaiba, Dubai, UAE',
+    email: 'admin@vertexprintdxb.com',
   },
 ];
 
@@ -110,7 +97,7 @@ export default function Contact() {
       {/* Contact Cards */}
       <section className="py-14 px-4 sm:px-6 lg:px-8 bg-slate-50">
         <div className="container-max">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {contactInfo.map((info, i) => (
               <ScrollReveal key={info.label} delay={i * 0.08}>
                 {info.href ? (
@@ -254,7 +241,7 @@ export default function Contact() {
                 <div className="rounded-2xl overflow-hidden mb-8 h-64 bg-slate-100 border border-slate-200 relative">
                   <iframe
                     title="Vertex Print Technologies Location"
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3612.0!2d55.3780!3d25.1165!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f652b1f9a8e5d%3A0x0!2sDubai+Silicon+Oasis%2C+Dubai!5e0!3m2!1sen!2sae!4v1700000000000!5m2!1sen!2sae"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3613.0!2d55.2920!3d25.2570!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sFalcon+Apartments%2C+Al+Ghubaiba%2C+Bur+Dubai!5e0!3m2!1sen!2sae!4v1700000000000!5m2!1sen!2sae"
                     width="100%" height="100%" style={{ border: 0 }}
                     allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade"
                   />
@@ -279,19 +266,13 @@ export default function Contact() {
                       <svg className="w-4 h-4 mt-0.5 text-slate-400 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
                         <path strokeLinecap="round" strokeLinejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0zM15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
                       </svg>
-                      <span>Dubai Silicon Oasis,<br/>Dubai, United Arab Emirates</span>
+                      <span>Shop No. 2, Falcon Apartments,<br/>Bur Dubai, Al Ghubaiba, Dubai, UAE</span>
                     </div>
-                    <a href="tel:+97142345678" className="flex items-center gap-2 hover:text-[#1264D6] transition-colors">
-                      <svg className="w-4 h-4 text-slate-400 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
-                      </svg>
-                      +971 4 234 5678
-                    </a>
-                    <a href="mailto:info@vertexprint.ae" className="flex items-center gap-2 hover:text-[#1264D6] transition-colors">
+                    <a href="mailto:admin@vertexprintdxb.com" className="flex items-center gap-2 hover:text-[#1264D6] transition-colors">
                       <svg className="w-4 h-4 text-slate-400 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
                         <path strokeLinecap="round" strokeLinejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
                       </svg>
-                      info@vertexprint.ae
+                      admin@vertexprintdxb.com
                     </a>
                   </div>
                 </motion.div>
@@ -326,12 +307,6 @@ export default function Contact() {
                   </div>
                   <div className="flex flex-col gap-2 text-xs text-slate-500">
                     <p className="leading-relaxed">{office.address}</p>
-                    <a href={`tel:${office.phone.replace(/\s/g, '')}`} className="flex items-center gap-1.5 hover:text-[#1264D6] transition-colors">
-                      <svg className="w-3.5 h-3.5 text-[#00B4D8]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
-                      </svg>
-                      {office.phone}
-                    </a>
                     <a href={`mailto:${office.email}`} className="flex items-center gap-1.5 hover:text-[#1264D6] transition-colors">
                       <svg className="w-3.5 h-3.5 text-[#00B4D8]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                         <path strokeLinecap="round" strokeLinejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
@@ -355,15 +330,15 @@ export default function Contact() {
               Join thousands of UAE businesses that trust Vertex Print Technologies for their technology and office needs.
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
-              <a href="tel:+97142345678" className="btn-white">
+              <a href="mailto:admin@vertexprintdxb.com" className="btn-white">
                 <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
                 </svg>
-                Call Us Now
+                Send Us an Email
               </a>
-              <a href="mailto:info@vertexprint.ae" className="btn-outline-white">
-                Send an Email
-              </a>
+              <Link to="/products" className="btn-outline-white">
+                Browse Products
+              </Link>
             </div>
           </ScrollReveal>
         </div>
