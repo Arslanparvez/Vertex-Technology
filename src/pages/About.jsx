@@ -41,7 +41,7 @@ export default function About() {
               <span style={{color:'#7DD3F5'}}>Technology in the Gulf</span>
             </h1>
             <p className="text-xl text-white/70 max-w-2xl leading-relaxed">
-              For over 25 years, Vertex Print Technologies has been the trusted partner for businesses seeking premium printing and technology solutions across Dubai and the UAE.
+              For over 15 years, Vertex Print Technologies has been the trusted partner for businesses seeking premium printing and technology solutions across Dubai and the UAE.
             </p>
           </ScrollReveal>
         </div>
@@ -55,7 +55,7 @@ export default function About() {
               <div className="relative">
                 <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=700&q=80" alt="Team" className="rounded-3xl shadow-xl object-cover w-full h-[480px]"/>
                 <div className="absolute -bottom-5 -right-5 bg-[#0D2848] text-white rounded-2xl p-6 shadow-xl">
-                  <div className="text-4xl font-black">25+</div>
+                  <div className="text-4xl font-black">15+</div>
                   <div className="text-[#7DD3F5] text-xs mt-0.5">Years in Dubai</div>
                 </div>
               </div>
@@ -66,7 +66,7 @@ export default function About() {
               <p className="text-slate-500 leading-relaxed mb-5">Headquartered in Dubai, Vertex Print Technologies started as a specialist in printing consumables and has evolved into a full-spectrum technology solutions provider trusted by businesses across the UAE.</p>
               <p className="text-slate-500 leading-relaxed mb-8">Our proprietary brand, <strong className="text-slate-800">Vertex Technology</strong>, is proudly manufactured in the UAE, combining local expertise with international quality standards.</p>
               <div className="grid grid-cols-2 gap-4 mb-8">
-                {[{l:'Support',v:'24/7'},{l:'Years Active',v:'25+'},{l:'Products',v:'500+'},{l:'Clients',v:'10K+'}].map(s=>(
+                {[{l:'Country',v:'1'},{l:'Years Active',v:'15+'},{l:'Products',v:'1000+'},{l:'Clients',v:'10K+'}].map(s=>(
                   <div key={s.l} className="bg-slate-50 border border-slate-200 rounded-2xl p-5">
                     <div className="text-3xl font-black text-[#1264D6]">{s.v}</div>
                     <div className="text-sm text-slate-500 font-medium mt-0.5">{s.l}</div>

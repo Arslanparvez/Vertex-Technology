@@ -4,6 +4,18 @@ import ScrollReveal from '../components/ScrollReveal';
 
 const CATEGORIES = [
   {
+    id: 'aio-printers',
+    name: 'All-in-One Printers',
+    image: 'https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?w=800&q=85',
+    desc: 'Multifunction printers that print, scan, and copy — perfect for high-volume office workflows from HP, Canon, Brother, and Epson.',
+  },
+  {
+    id: 'laser-printers',
+    name: 'Laser Office Printers',
+    image: 'https://images.unsplash.com/photo-1650094980833-7373de26feb6?w=800&q=85',
+    desc: 'Reliable monochrome and colour laser printers built for daily business workloads — fast, sharp, and energy-efficient.',
+  },
+  {
     id: 'laptops',
     name: 'Laptops',
     image: 'https://technoxuae.com/wp-content/uploads/2025/10/1-2.png',
@@ -184,9 +196,9 @@ export default function Products() {
           <ScrollReveal delay={0.15}>
             <div className="flex flex-wrap items-center justify-center gap-8 mt-10">
               {[
-                { value: '200+', label: 'Products' },
+                { value: '1000+', label: 'Products' },
                 { value: '50+',  label: 'Brands' },
-                { value: '4',    label: 'Countries' },
+                { value: '1',    label: 'Country' },
                 { value: '15+',  label: 'Yrs Experience' },
               ].map(s => (
                 <div key={s.label} className="text-center">

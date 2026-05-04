@@ -4,19 +4,19 @@ import { useRef, useState, useEffect } from 'react';
 import ScrollReveal from '../components/ScrollReveal';
 
 const categories = [
-  { icon: '🖨️', title: 'Printing Supplies',          desc: 'Toners, cartridges & consumables for all major brands.',        accent: '#1264D6' },
-  { icon: '💻', title: 'Computing Products',           desc: 'PCs, laptops, monitors & workstations.',                        accent: '#00B4D8' },
-  { icon: '🔒', title: 'Cyber Security & Backup',      desc: 'Advanced endpoint protection & backup solutions.',              accent: '#DC2626' },
-  { icon: '🌐', title: 'Data Storage & Networking',    desc: 'Servers, NAS, switches & infrastructure.',                      accent: '#7C3AED' },
-  { icon: '🛡️', title: 'Software & Antivirus',         desc: 'Licenses, OS, productivity & security software.',               accent: '#059669' },
-  { icon: '📎', title: 'Stationery & Office Supplies', desc: 'Everything your office needs, delivered fast.',                 accent: '#D97706' },
+  { image: 'https://images.unsplash.com/photo-1740884730591-8f4878e2cc64?w=600&q=85', title: 'Toner & Cartridges',         desc: 'Genuine and compatible toners, ink cartridges & drum units for HP, Canon, Epson & Lexmark.', accent: '#1264D6' },
+  { icon: '🖨️', title: 'Printing Supplies',          desc: 'Premium consumables, ribbons & accessories for every major printer brand.',                  accent: '#0EA5E9' },
+  { icon: '💻', title: 'Computing Products',           desc: 'PCs, laptops, monitors & workstations.',                                                     accent: '#00B4D8' },
+  { icon: '🔒', title: 'Cyber Security & Backup',      desc: 'Advanced endpoint protection & backup solutions.',                                           accent: '#DC2626' },
+  { icon: '🌐', title: 'Data Storage & Networking',    desc: 'Servers, NAS, switches & infrastructure.',                                                   accent: '#7C3AED' },
+  { icon: '🛡️', title: 'Software & Antivirus',         desc: 'Licenses, OS, productivity & security software.',                                            accent: '#059669' },
 ];
 
 const stats = [
-  { value: '25+',  label: 'Years of Excellence' },
-  { value: '500+', label: 'Brands & Products'   },
-  { value: '24/7', label: 'Customer Support'    },
-  { value: '10K+', label: 'Happy Clients'        },
+  { value: '15+',  label: 'Years of Excellence' },
+  { value: '1000+', label: 'Brands & Products'  },
+  { value: '1',    label: 'Country'             },
+  { value: '10K+', label: 'Happy Clients'       },
 ];
 
 const sliderBrands = [
@@ -32,6 +32,25 @@ const sliderBrands = [
   { name: 'ASUS',      logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/ASUS_Logo.svg/1200px-ASUS_Logo.svg.png' },
   { name: 'Kingston',  logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Kingston_Technology_logo.svg/1200px-Kingston_Technology_logo.svg.png' },
   { name: 'Lexmark',   logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Lexmark_logo.svg/1200px-Lexmark_logo.svg.png' },
+];
+
+const featuredPrinters = [
+  {
+    image: 'https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?w=1200&q=85',
+    badge: 'Best Seller',
+    name: 'HP All-in-One Multifunction Printer',
+    desc: 'Print, scan, and copy with effortless productivity. Engineered for high-volume business workflows with crisp colour output and Wi-Fi connectivity.',
+    features: ['Wireless & Wi-Fi Direct', 'Auto Duplex Printing', 'Up to 30 ppm'],
+    accent: '#1264D6',
+  },
+  {
+    image: 'https://images.unsplash.com/photo-1650094980833-7373de26feb6?w=1200&q=85',
+    badge: 'Office Favourite',
+    name: 'Compact Laser Office Printer',
+    desc: 'Reliable monochrome and colour laser printing for modern offices. Sharp, fast, and energy-efficient — built to handle daily workloads with ease.',
+    features: ['High Yield Toner', 'Mobile Printing', 'Quiet Operation'],
+    accent: '#00B4D8',
+  },
 ];
 
 const industries = [
@@ -229,7 +248,18 @@ export default function Home() {
                     className="group bg-white border border-slate-200 rounded-2xl p-6 cursor-pointer shadow-sm hover:shadow-xl transition-shadow duration-300"
                     style={{ '--accent': cat.accent }}
                   >
-                    <div className="text-3xl mb-5">{cat.icon}</div>
+                    {cat.image ? (
+                      <div className="w-16 h-16 mb-5 rounded-xl bg-slate-50 flex items-center justify-center overflow-hidden p-2">
+                        <img
+                          src={cat.image}
+                          alt={cat.title}
+                          className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500"
+                          loading="lazy"
+                        />
+                      </div>
+                    ) : (
+                      <div className="text-3xl mb-5">{cat.icon}</div>
+                    )}
                     <h3 className="text-base font-bold text-slate-900 mb-2">{cat.title}</h3>
                     <p className="text-slate-500 text-sm leading-relaxed mb-5">{cat.desc}</p>
                     <div className="flex items-center gap-1.5 font-semibold text-sm transition-all duration-300 group-hover:gap-2.5" style={{ color: cat.accent }}>
@@ -239,6 +269,58 @@ export default function Home() {
                     <div className="mt-4 h-0.5 rounded-full w-10 transition-all duration-300 group-hover:w-16" style={{ background: cat.accent }} />
                   </motion.div>
                 </Link>
+              </ScrollReveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── FEATURED PRINTERS ── */}
+      <section className="section-padding bg-white">
+        <div className="container-max">
+          <ScrollReveal>
+            <div className="text-center mb-14">
+              <span className="section-label">Featured Printers</span>
+              <h2 className="section-title">Premium Printers for Every Office</h2>
+              <p className="section-subtitle mx-auto">Hand-picked, high-performance printers from the world's most trusted brands — ready for delivery across Dubai.</p>
+            </div>
+          </ScrollReveal>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {featuredPrinters.map((p, i) => (
+              <ScrollReveal key={p.name} delay={i * 0.1} direction={i % 2 === 0 ? 'right' : 'left'}>
+                <motion.div
+                  whileHover={{ y: -6 }}
+                  transition={{ type: 'spring', stiffness: 380, damping: 26 }}
+                  className="group relative bg-white border border-slate-200 rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl transition-shadow duration-500 h-full flex flex-col"
+                >
+                  {/* Big image */}
+                  <div className="relative h-72 sm:h-80 bg-slate-50 overflow-hidden">
+                    <img
+                      src={p.image}
+                      alt={p.name}
+                      className="w-full h-full object-cover group-hover:scale-[1.04] transition-transform duration-700"
+                      loading="lazy"
+                    />
+                    <div className="absolute top-4 left-4 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider text-white shadow-md" style={{ background: p.accent }}>
+                      {p.badge}
+                    </div>
+                  </div>
+
+                  {/* Content */}
+                  <div className="p-7 flex flex-col flex-1">
+                    <h3 className="text-xl font-bold text-slate-900 mb-2 leading-tight">{p.name}</h3>
+                    <p className="text-slate-500 text-sm leading-relaxed mb-5">{p.desc}</p>
+
+                    <ul className="flex flex-col gap-2">
+                      {p.features.map(f => (
+                        <li key={f} className="flex items-center gap-2 text-sm text-slate-600">
+                          <span className="w-1.5 h-1.5 rounded-full" style={{ background: p.accent }} />
+                          {f}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </motion.div>
               </ScrollReveal>
             ))}
           </div>
@@ -290,7 +372,7 @@ export default function Home() {
                   transition={{ duration: 0.5, delay: 0.3, type: 'spring', stiffness: 260, damping: 20 }}
                   className="absolute -bottom-5 -right-5 bg-[#0D2848] text-white rounded-2xl p-5 shadow-xl"
                 >
-                  <div className="text-3xl font-black">25+</div>
+                  <div className="text-3xl font-black">15+</div>
                   <div className="text-[#7DD3F5] text-xs mt-0.5">Years of Trust</div>
                 </motion.div>
                 <motion.div
