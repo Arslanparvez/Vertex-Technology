@@ -103,7 +103,7 @@ export default function Navbar() {
             </div>
 
             <div className="flex items-center gap-4 ml-auto">
-              <span className="hidden md:block text-[11px] text-white/40 tracking-wide">UAE · Oman · Qatar · Bahrain</span>
+              <span className="hidden md:block text-[11px] text-white/40 tracking-wide">Dubai · United Arab Emirates</span>
               <span className="hidden md:block w-px h-3 bg-white/15"/>
               <div className="flex items-center gap-2">
                 {socials.map(s => (

@@ -74,14 +74,14 @@ export default function Brands() {
                 Beyond distributing the world's top brands, we manufacture our own line of premium printing consumables under the <strong className="text-white">Vertex Technology</strong> label — proudly made in the UAE.
               </p>
               <p className="text-white/65 leading-relaxed mb-8">
-                Every Vertex Technology cartridge, toner, and consumable is engineered to meet or exceed OEM specifications, delivering reliable performance at competitive pricing for businesses across the GCC.
+                Every Vertex Technology cartridge, toner, and consumable is engineered to meet or exceed OEM specifications, delivering reliable performance at competitive pricing for businesses across Dubai and the UAE.
               </p>
               <div className="grid grid-cols-2 gap-4 mb-8">
                 {[
                   {l:'Products in Range', v:'200+'},
                   {l:'OEM Compatible',    v:'100%'},
-                  {l:'UAE Manufactured', v:'Since 2008'},
-                  {l:'GCC Distribution', v:'4 Countries'},
+                  {l:'UAE Manufactured', v:'Premium'},
+                  {l:'Dubai Headquarters', v:'24/7 Support'},
                 ].map(s => (
                   <div key={s.l} className="bg-white/8 border border-[#4DB8FF]/20 rounded-2xl p-5">
                     <div className="text-2xl font-black text-[#7DD3F5]">{s.v}</div>
@@ -149,7 +149,7 @@ export default function Brands() {
               <p className="text-slate-600 text-base leading-relaxed max-w-2xl mx-auto">
                 <strong className="text-slate-800">Vertex Print Technologies</strong> partners with{' '}
                 <strong className="text-slate-800">70+ international brands</strong> to deliver{' '}
-                <strong className="text-slate-800">genuine, high-quality technology and office products</strong> across the GCC.
+                <strong className="text-slate-800">genuine, high-quality technology and office products</strong> across Dubai and the UAE.
               </p>
               <p className="text-slate-500 text-sm mt-3 max-w-xl mx-auto">
                 Every brand we carry is authorized. Every product is sourced through verified channels to guarantee authenticity and complete warranty coverage.
@@ -224,7 +224,7 @@ export default function Brands() {
                 <span className="section-label-light">Brand Partnership</span>
                 <h3 className="text-3xl font-bold text-white mb-4">Interested in Partnering With Us?</h3>
                 <p className="text-white/70 mb-8 max-w-xl mx-auto text-lg">
-                  If you represent a brand and want to reach GCC businesses through Vertex Print Technologies' established network, we'd love to hear from you.
+                  If you represent a brand and want to reach UAE businesses through Vertex Print Technologies' established Dubai network, we'd love to hear from you.
                 </p>
                 <Link to="/contact" className="btn-white">
                   Contact Our Team

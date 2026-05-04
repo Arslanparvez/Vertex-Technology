@@ -2,7 +2,6 @@ import { Link } from 'react-router-dom';
 import { motion, useInView } from 'framer-motion';
 import { useRef, useState, useEffect } from 'react';
 import ScrollReveal from '../components/ScrollReveal';
-import TestimonialSlider from '../components/TestimonialSlider';
 
 const categories = [
   { icon: '🖨️', title: 'Printing Supplies',          desc: 'Toners, cartridges & consumables for all major brands.',        accent: '#1264D6' },
@@ -16,7 +15,7 @@ const categories = [
 const stats = [
   { value: '25+',  label: 'Years of Excellence' },
   { value: '500+', label: 'Brands & Products'   },
-  { value: '4',    label: 'GCC Countries'        },
+  { value: '24/7', label: 'Customer Support'    },
   { value: '10K+', label: 'Happy Clients'        },
 ];
 
@@ -81,8 +80,8 @@ export default function Home() {
       <section className="relative min-h-screen flex items-center overflow-hidden">
         {/* Background */}
         <div className="absolute inset-0">
-          <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=1920&q=80" alt="" className="w-full h-full object-cover" />
-          <div className="absolute inset-0 bg-gradient-to-br from-[#060D1A]/96 via-[#0D2848]/90 to-[#1264D6]/70" />
+          <img src="https://images.unsplash.com/photo-1582407947304-fd86f028f716?w=1920&q=85" alt="" className="w-full h-full object-cover" />
+          <div className="absolute inset-0 bg-gradient-to-br from-[#060D1A]/95 via-[#0D2848]/88 to-[#1264D6]/65" />
         </div>
 
         {/* Animated glow orbs */}
@@ -126,7 +125,7 @@ export default function Home() {
               className="inline-flex items-center gap-2 bg-white/10 border border-[#4DB8FF]/30 text-white/90 text-sm font-medium px-4 py-1.5 rounded-full mb-8 backdrop-blur-sm"
             >
               <span className="w-1.5 h-1.5 bg-[#00B4D8] rounded-full animate-pulse" />
-              Trusted since 1998 — UAE & GCC
+              Trusted Technology Partner — Dubai, UAE
             </motion.div>
 
             <motion.h1
@@ -154,7 +153,7 @@ export default function Home() {
               transition={{ duration: 0.6, delay: 0.4 }}
               className="text-lg text-white/70 leading-relaxed mb-10 max-w-xl"
             >
-              Cost-effective, reliable, and innovative solutions for businesses across the UAE and GCC — from printing consumables to enterprise IT infrastructure.
+              Cost-effective, reliable, and innovative solutions for businesses across Dubai and the UAE — from printing consumables to enterprise IT infrastructure.
             </motion.p>
 
             <motion.div
@@ -318,21 +317,18 @@ export default function Home() {
 
             <ScrollReveal direction="left">
               <span className="section-label">About Vertex Print</span>
-              <h2 className="text-4xl font-bold text-slate-900 leading-tight mb-5">A Legacy of Quality & Innovation Since 1998</h2>
-              <p className="text-slate-500 leading-relaxed mb-5">Founded in Dubai in 1998, Vertex Print Technologies has grown into a leading technology solutions provider with a strong presence across the UAE, Oman, Qatar, and Bahrain.</p>
+              <h2 className="text-4xl font-bold text-slate-900 leading-tight mb-5">A Legacy of Quality & Innovation</h2>
+              <p className="text-slate-500 leading-relaxed mb-5">Headquartered in Dubai, Vertex Print Technologies is a leading technology solutions provider trusted by businesses across the UAE for premium printing, computing, and IT infrastructure.</p>
               <p className="text-slate-500 leading-relaxed mb-8">Our mission: deliver quality products, drive innovation, and ensure complete customer satisfaction.</p>
-              <div className="grid grid-cols-2 gap-3 mb-8">
-                {['UAE','Oman','Qatar','Bahrain'].map(c=>(
-                  <motion.div
-                    key={c}
-                    whileHover={{ x: 4 }}
-                    transition={{ type: 'spring', stiffness: 400, damping: 25 }}
-                    className="flex items-center gap-2 text-slate-700 font-medium text-sm cursor-default"
-                  >
-                    <div className="w-2 h-2 bg-[#1264D6] rounded-full"/>
-                    {c}
-                  </motion.div>
-                ))}
+              <div className="flex items-center gap-2 mb-8">
+                <motion.div
+                  whileHover={{ x: 4 }}
+                  transition={{ type: 'spring', stiffness: 400, damping: 25 }}
+                  className="flex items-center gap-2 text-slate-700 font-medium text-sm cursor-default"
+                >
+                  <div className="w-2 h-2 bg-[#1264D6] rounded-full"/>
+                  Dubai, United Arab Emirates — Head Office
+                </motion.div>
               </div>
               <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }}>
                 <Link to="/about" className="btn-primary">
@@ -377,24 +373,6 @@ export default function Home() {
               </ScrollReveal>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* ── TESTIMONIALS ── */}
-      <section className="section-padding bg-slate-50">
-        <div className="container-max">
-          <ScrollReveal>
-            <div className="text-center mb-14">
-              <span className="section-label">Happy Clients</span>
-              <h2 className="section-title">Trusted by Leading Organizations</h2>
-              <p className="section-subtitle mx-auto">See what our clients say about working with Vertex Print Technologies.</p>
-            </div>
-          </ScrollReveal>
-          <ScrollReveal delay={0.15}>
-            <div className="max-w-3xl mx-auto">
-              <TestimonialSlider />
-            </div>
-          </ScrollReveal>
         </div>
       </section>
 

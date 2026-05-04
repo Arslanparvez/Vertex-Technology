@@ -177,7 +177,7 @@ export default function Products() {
               <span className="gradient-text">Modern Business</span>
             </h1>
             <p className="text-xl text-white/65 max-w-2xl mx-auto leading-relaxed">
-              Technology and office consumables sourced directly from the world's most trusted brands — shipped across the GCC.
+              Technology and office consumables sourced directly from the world's most trusted brands — delivered across Dubai and the UAE.
             </p>
           </ScrollReveal>
 
@@ -255,7 +255,7 @@ export default function Products() {
               <span className="text-[#7DD3F5]">Just ask us.</span>
             </h2>
             <p className="text-white/70 text-lg mb-10 max-w-xl mx-auto">
-              Our specialist team can procure hard-to-find items, negotiate bulk pricing, and deliver across UAE, Oman, Qatar, and Bahrain.
+              Our specialist team can procure hard-to-find items, negotiate bulk pricing, and deliver across Dubai and the UAE.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>

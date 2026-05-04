@@ -78,7 +78,7 @@ export default function Footer() {
               <Logo className="h-12 text-white transition-opacity group-hover:opacity-80"/>
             </Link>
             <p className="text-sm leading-relaxed text-white/50 mb-6 max-w-xs">
-              Empowering businesses across the UAE and GCC with premium printing, technology, and office solutions since 1998.
+              Empowering businesses in Dubai and across the UAE with premium printing, technology, and office solutions.
             </p>
 
             <div className="flex items-center gap-2 mb-8">
@@ -204,7 +204,7 @@ export default function Footer() {
             <span className="w-px h-3 bg-white/10"/>
             <span className="flex items-center gap-1.5">
               <span className="w-1.5 h-1.5 bg-[#00B4D8] rounded-full animate-pulse"/>
-              Operating across UAE & GCC
+              Headquartered in Dubai, UAE
             </span>
           </div>
         </div>

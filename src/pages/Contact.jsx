@@ -67,30 +67,6 @@ const offices = [
     phone: '+971 4 234 5678',
     email: 'dubai@vertexprint.ae',
   },
-  {
-    city: 'Abu Dhabi',
-    flag: '🇦🇪',
-    type: 'UAE Branch',
-    address: 'Khalifa City A, Abu Dhabi, UAE',
-    phone: '+971 2 234 5678',
-    email: 'abudhabi@vertexprint.ae',
-  },
-  {
-    city: 'Muscat',
-    flag: '🇴🇲',
-    type: 'Oman Office',
-    address: 'Madinat Al Sultan Qaboos, Muscat',
-    phone: '+968 2 234 5678',
-    email: 'oman@vertexprint.ae',
-  },
-  {
-    city: 'Doha',
-    flag: '🇶🇦',
-    type: 'Qatar Office',
-    address: 'West Bay Business District, Doha',
-    phone: '+974 4 234 5678',
-    email: 'qatar@vertexprint.ae',
-  },
 ];
 
 export default function Contact() {
@@ -125,7 +101,7 @@ export default function Contact() {
               <span style={{color:'#7DD3F5'}}>Together</span>
             </h1>
             <p className="text-xl text-white/70 max-w-2xl mx-auto">
-              Have a product inquiry, need a quote, or want to discuss a custom solution? Our team across the GCC is ready — and we respond within 24 hours.
+              Have a product inquiry, need a quote, or want to discuss a custom solution? Our Dubai team is ready — and we respond within 24 hours.
             </p>
           </ScrollReveal>
         </div>
@@ -325,19 +301,19 @@ export default function Contact() {
         </div>
       </section>
 
-      {/* GCC Offices */}
+      {/* Office Location */}
       <section className="section-padding bg-slate-50">
         <div className="container-max">
           <ScrollReveal>
             <div className="text-center mb-14">
               <span className="section-label">Our Presence</span>
-              <h2 className="section-title">Offices Across the GCC</h2>
+              <h2 className="section-title">Visit Our Dubai Office</h2>
               <p className="section-subtitle mx-auto">
-                With offices in four GCC countries, Vertex Print Technologies brings local expertise and enterprise support wherever you are.
+                Headquartered in Dubai, Vertex Print Technologies brings local expertise and dedicated enterprise support to every client.
               </p>
             </div>
           </ScrollReveal>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          <div className="grid grid-cols-1 max-w-md mx-auto gap-5">
             {offices.map((office, i) => (
               <ScrollReveal key={office.city} delay={i * 0.1}>
                 <div className="card p-6 hover:border-[#1264D6]/20 h-full">
@@ -376,7 +352,7 @@ export default function Contact() {
           <ScrollReveal>
             <h2 className="text-4xl sm:text-5xl font-bold text-white mb-4">Ready to Get Started?</h2>
             <p className="text-white/70 text-lg mb-8 max-w-xl mx-auto">
-              Join thousands of GCC businesses that trust Vertex Print Technologies for their technology and office needs.
+              Join thousands of UAE businesses that trust Vertex Print Technologies for their technology and office needs.
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
               <a href="tel:+97142345678" className="btn-white">
