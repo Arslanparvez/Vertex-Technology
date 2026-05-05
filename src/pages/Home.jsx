@@ -4,7 +4,7 @@ import { useRef, useState, useEffect } from 'react';
 import ScrollReveal from '../components/ScrollReveal';
 
 const categories = [
-  { image: 'https://images.unsplash.com/photo-1740884730591-8f4878e2cc64?w=600&q=85', title: 'Toner & Cartridges',         desc: 'Genuine and compatible toners, ink cartridges & drum units for HP, Canon, Epson & Lexmark.', accent: '#1264D6' },
+  { image: '/products/toner-cartridges.png', title: 'Toner & Cartridges',         desc: 'Genuine and compatible toners, ink cartridges & drum units for HP, Canon, Epson & Lexmark.', accent: '#1264D6' },
   { icon: '🖨️', title: 'Printing Supplies',          desc: 'Premium consumables, ribbons & accessories for every major printer brand.',                  accent: '#0EA5E9' },
   { icon: '💻', title: 'Computing Products',           desc: 'PCs, laptops, monitors & workstations.',                                                     accent: '#00B4D8' },
   { icon: '🔒', title: 'Cyber Security & Backup',      desc: 'Advanced endpoint protection & backup solutions.',                                           accent: '#DC2626' },

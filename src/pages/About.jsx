@@ -18,10 +18,35 @@ const values = [
 ];
 
 const team = [
-  { name:'Khalid Al Mansouri', role:'Chief Executive Officer',      img:'https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&h=400&fit=crop&crop=face' },
-  { name:'Dr. Rania Hassan',   role:'Chief Technology Officer',     img:'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=400&fit=crop&crop=face' },
-  { name:'James Crawford',     role:'Head of Sales & Partnerships', img:'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&h=400&fit=crop&crop=face' },
-  { name:'Nour Al Hamdan',     role:'VP of Operations',             img:'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&h=400&fit=crop&crop=face' },
+  {
+    name: 'Abdullah Shaikh',
+    role: 'GCC & Africa Sales Manager',
+    phone: '+971 52 266 5050',
+    img: 'https://ui-avatars.com/api/?name=Abdullah+Shaikh&background=0D2848&color=ffffff&size=512&bold=true&font-size=0.38',
+  },
+  {
+    name: 'Anwar Thange',
+    role: 'Sales Manager — UAE',
+    img: 'https://ui-avatars.com/api/?name=Anwar+Thange&background=1264D6&color=ffffff&size=512&bold=true&font-size=0.38',
+  },
+  {
+    name: 'Lamine',
+    role: 'Levant Sales Manager',
+    phone: '+971 52 367 1855',
+    img: '/team/lamine.png',
+  },
+  {
+    name: 'Khalid',
+    role: 'CIS Countries Sales Manager',
+    phone: '+973 3369 2542',
+    img: '/team/khalid.png',
+  },
+  {
+    name: 'Sana Khan',
+    role: 'Legal Counsel',
+    phone: '+971 55 760 1873',
+    img: 'https://ui-avatars.com/api/?name=Sana+Khan&background=00B4D8&color=ffffff&size=512&bold=true&font-size=0.38',
+  },
 ];
 
 export default function About() {
@@ -130,17 +155,28 @@ export default function About() {
       {/* Team */}
       <section className="section-padding bg-slate-50">
         <div className="container-max">
-          <ScrollReveal><div className="text-center mb-14"><span className="section-label">Our Leadership</span><h2 className="section-title">Meet the Team</h2><p className="section-subtitle mx-auto">Experienced leaders driving innovation from Dubai.</p></div></ScrollReveal>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          <ScrollReveal><div className="text-center mb-14"><span className="section-label">Our Team</span><h2 className="section-title">Meet the Team</h2><p className="section-subtitle mx-auto">Regional sales leadership and support, ready to assist customers across the GCC, Africa, the Levant, and CIS markets.</p></div></ScrollReveal>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-5">
             {team.map((m,i)=>(
-              <ScrollReveal key={m.name} delay={i*0.1}>
-                <div className="group card overflow-hidden">
-                  <div className="overflow-hidden h-56">
-                    <img src={m.img} alt={m.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"/>
+              <ScrollReveal key={m.name} delay={i*0.08}>
+                <div className="group card overflow-hidden h-full flex flex-col">
+                  <div className="overflow-hidden h-60 bg-slate-100">
+                    <img src={m.img} alt={m.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy"/>
                   </div>
-                  <div className="p-5">
+                  <div className="p-5 flex flex-col flex-1">
                     <h3 className="font-bold text-slate-900 text-sm">{m.name}</h3>
                     <p className="text-[#1264D6] text-xs font-medium mt-0.5">{m.role}</p>
+                    {m.phone && (
+                      <a
+                        href={`tel:${m.phone.replace(/\s/g, '')}`}
+                        className="mt-3 inline-flex items-center gap-1.5 text-xs text-slate-500 hover:text-[#1264D6] transition-colors"
+                      >
+                        <svg className="w-3.5 h-3.5 text-[#00B4D8]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                        </svg>
+                        {m.phone}
+                      </a>
+                    )}
                   </div>
                 </div>
               </ScrollReveal>

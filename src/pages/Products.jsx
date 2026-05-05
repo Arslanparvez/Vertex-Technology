@@ -4,6 +4,12 @@ import ScrollReveal from '../components/ScrollReveal';
 
 const CATEGORIES = [
   {
+    id: 'toner',
+    name: 'Toner & Cartridges',
+    image: '/products/toner-cartridges.png',
+    desc: 'Genuine and compatible toner cartridges, ink refills, and drum units for maximum yield and crisp output across all major brands.',
+  },
+  {
     id: 'aio-printers',
     name: 'All-in-One Printers',
     image: 'https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?w=800&q=85',
@@ -80,12 +86,6 @@ const CATEGORIES = [
     name: 'Software & Antivirus',
     image: 'https://technoxuae.com/wp-content/uploads/2025/10/11-1.png',
     desc: 'Licensed Microsoft 365, Windows OS, Kaspersky, Bitdefender, and enterprise ERP platforms.',
-  },
-  {
-    id: 'toner',
-    name: 'Toner & Cartridges',
-    image: 'https://technoxuae.com/wp-content/uploads/2025/10/12-1.png',
-    desc: 'Genuine and compatible toner cartridges and ink refills for maximum yield and crisp output.',
   },
 ];
 
