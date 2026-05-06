@@ -17,37 +17,37 @@ const values = [
   { icon:'🌍', title:'Local Expertise', desc:'Deep Dubai roots paired with global standards — delivering a consistent premium experience.',          bg:'bg-violet-50',   text:'text-violet-600' },
 ];
 
-const team = [
-  {
-    name: 'Abdullah Shaikh',
-    role: 'GCC & Africa Sales Manager',
-    phone: '+971 52 266 5050',
-    img: 'https://ui-avatars.com/api/?name=Abdullah+Shaikh&background=0D2848&color=ffffff&size=512&bold=true&font-size=0.38',
-  },
-  {
-    name: 'Anwar Thange',
-    role: 'Sales Manager — UAE',
-    img: 'https://ui-avatars.com/api/?name=Anwar+Thange&background=1264D6&color=ffffff&size=512&bold=true&font-size=0.38',
-  },
-  {
-    name: 'Lamine',
-    role: 'Levant Sales Manager',
-    phone: '+971 52 367 1855',
-    img: '/team/lamine.png',
-  },
-  {
-    name: 'Khalid',
-    role: 'CIS Countries Sales Manager',
-    phone: '+973 3369 2542',
-    img: '/team/khalid.png',
-  },
-  {
-    name: 'Sana Khan',
-    role: 'Legal Counsel',
-    phone: '+971 55 760 1873',
-    img: 'https://ui-avatars.com/api/?name=Sana+Khan&background=00B4D8&color=ffffff&size=512&bold=true&font-size=0.38',
-  },
-];
+// const team = [
+//   {
+//     name: 'Abdullah Shaikh',
+//     role: 'GCC & Africa Sales Manager',
+//     phone: '+971 52 266 5050',
+//     img: 'https://ui-avatars.com/api/?name=Abdullah+Shaikh&background=0D2848&color=ffffff&size=512&bold=true&font-size=0.38',
+//   },
+//   {
+//     name: 'Anwar Thange',
+//     role: 'Sales Manager — UAE',
+//     img: 'https://ui-avatars.com/api/?name=Anwar+Thange&background=1264D6&color=ffffff&size=512&bold=true&font-size=0.38',
+//   },
+//   {
+//     name: 'Lamine',
+//     role: 'Levant Sales Manager',
+//     phone: '+971 52 367 1855',
+//     img: '/team/lamine.png',
+//   },
+//   {
+//     name: 'Khalid',
+//     role: 'CIS Countries Sales Manager',
+//     phone: '+973 3369 2542',
+//     img: '/team/khalid.png',
+//   },
+//   {
+//     name: 'Sana Khan',
+//     role: 'Legal Counsel',
+//     phone: '+971 55 760 1873',
+//     img: 'https://ui-avatars.com/api/?name=Sana+Khan&background=00B4D8&color=ffffff&size=512&bold=true&font-size=0.38',
+//   },
+// ];
 
 export default function About() {
   return (
@@ -153,7 +153,7 @@ export default function About() {
       </section>
 
       {/* Team */}
-      <section className="section-padding bg-slate-50">
+      {/* <section className="section-padding bg-slate-50">
         <div className="container-max">
           <ScrollReveal><div className="text-center mb-14"><span className="section-label">Our Team</span><h2 className="section-title">Meet the Team</h2><p className="section-subtitle mx-auto">Regional sales leadership and support, ready to assist customers across the GCC, Africa, the Levant, and CIS markets.</p></div></ScrollReveal>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-5">
@@ -183,7 +183,7 @@ export default function About() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Mission CTA */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-[#0D2848] to-[#1264D6]">
