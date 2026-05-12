@@ -91,7 +91,7 @@ export default function Navbar() {
                 <svg className="w-3 h-3 text-[#00B4D8]" fill="currentColor" viewBox="0 0 8 8">
                   <circle cx="4" cy="4" r="3"/>
                 </svg>
-                Sun – Thu: 8AM – 6PM
+                Mon – Sat: 8AM – 6PM
               </span>
             </div>
 
@@ -122,7 +122,7 @@ export default function Navbar() {
           <div className="flex items-center justify-between h-[104px]">
 
             <Link to="/" className="flex items-center group flex-shrink-0">
-              <Logo className={`h-20 transition-opacity duration-200 group-hover:opacity-80 ${
+              <Logo className={`h-24 transition-opacity duration-200 group-hover:opacity-80 ${
                 scrolled ? 'text-[#0D2848]' : 'text-white'
               }`}/>
             </Link>
