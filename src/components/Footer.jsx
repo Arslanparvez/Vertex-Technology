@@ -75,7 +75,7 @@ export default function Footer() {
           {/* Brand column */}
           <div className="lg:col-span-4">
             <Link to="/" className="inline-block mb-6 group">
-              <Logo className="h-12 text-white transition-opacity group-hover:opacity-80"/>
+              <Logo className="h-36 text-white transition-opacity group-hover:opacity-80"/>
             </Link>
             <p className="text-sm leading-relaxed text-white/50 mb-6 max-w-xs">
               Empowering businesses in Dubai and across the UAE with premium printing, technology, and office solutions.

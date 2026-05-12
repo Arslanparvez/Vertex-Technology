@@ -119,10 +119,10 @@ export default function Navbar() {
           : 'bg-transparent'
       }`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-[72px]">
+          <div className="flex items-center justify-between h-[104px]">
 
             <Link to="/" className="flex items-center group flex-shrink-0">
-              <Logo className={`h-11 transition-opacity duration-200 group-hover:opacity-80 ${
+              <Logo className={`h-20 transition-opacity duration-200 group-hover:opacity-80 ${
                 scrolled ? 'text-[#0D2848]' : 'text-white'
               }`}/>
             </Link>
