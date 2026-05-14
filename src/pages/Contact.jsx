@@ -38,8 +38,8 @@ const contactInfo = [
       </svg>
     ),
     label: 'Business Hours',
-    value: 'Sun – Thu: 8AM – 6PM',
-    sub: 'Fri – Sat: Closed',
+    value: 'Mon – Sat: 8AM – 6PM',
+    sub: 'Sun: Closed',
     href: null,
     bg: 'bg-emerald-50',
     text: 'text-emerald-600',
