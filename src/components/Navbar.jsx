@@ -91,7 +91,7 @@ export default function Navbar() {
                 <svg className="w-3 h-3 text-[#00B4D8]" fill="currentColor" viewBox="0 0 8 8">
                   <circle cx="4" cy="4" r="3"/>
                 </svg>
-                Mon – Sat: 8AM – 6PM
+                Mon – Sat
               </span>
             </div>
 
