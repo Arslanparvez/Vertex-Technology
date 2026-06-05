@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+  <defs>
+    <linearGradient id="leftGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f5f7fa"/>
+      <stop offset="100%" stop-color="#cfd8e3"/>
+    </linearGradient>
+    <linearGradient id="rightGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#b8f5ff"/>
+      <stop offset="100%" stop-color="#38bdf8"/>
+    </linearGradient>
+  </defs>
+
+  <path d="M52 38 L120 196 L144 196 L86 38 Z"
+        fill="url(#leftGrad)"
+        stroke="#2563eb"
+        stroke-width="6"
+        stroke-linejoin="round"/>
+
+  <path d="M144 196 L204 54 L170 54 L120 196 Z"
+        fill="url(#rightGrad)"
+        stroke="#2563eb"
+        stroke-width="6"
+        stroke-linejoin="round"/>
+</svg>
